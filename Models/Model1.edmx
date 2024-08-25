@@ -1,0 +1,1134 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="Pill_Reminder_SystemModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="CareTaker">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="fname" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="lname" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="email" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="password" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Dispenser">
+          <Key>
+            <PropertyRef Name="disp_id" />
+          </Key>
+          <Property Name="disp_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="sun_morn" Type="int" />
+          <Property Name="sun_noon" Type="int" />
+          <Property Name="sun_even" Type="int" />
+          <Property Name="sun_night" Type="int" />
+          <Property Name="mon_morn" Type="int" />
+          <Property Name="mon_noon" Type="int" />
+          <Property Name="mon_even" Type="int" />
+          <Property Name="mon_night" Type="int" />
+          <Property Name="tue_morn" Type="int" />
+          <Property Name="tue_noon" Type="int" />
+          <Property Name="tue_even" Type="int" />
+          <Property Name="tue_night" Type="int" />
+          <Property Name="wed_morn" Type="int" />
+          <Property Name="wed_noon" Type="int" />
+          <Property Name="wed_even" Type="int" />
+          <Property Name="wed_night" Type="int" />
+          <Property Name="thr_morn" Type="int" />
+          <Property Name="thr_noon" Type="int" />
+          <Property Name="thr_even" Type="int" />
+          <Property Name="thr_night" Type="int" />
+          <Property Name="fri_morn" Type="int" />
+          <Property Name="fri_noon" Type="int" />
+          <Property Name="fri_even" Type="int" />
+          <Property Name="fri_night" Type="int" />
+          <Property Name="sat_morn" Type="int" />
+          <Property Name="sat_noon" Type="int" />
+          <Property Name="sat_even" Type="int" />
+          <Property Name="sat_night" Type="int" />
+          <Property Name="patient_id" Type="int" />
+        </EntityType>
+        <EntityType Name="Dispenser2">
+          <Key>
+            <PropertyRef Name="disp_id" />
+          </Key>
+          <Property Name="disp_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="sun_morn" Type="int" />
+          <Property Name="sun_noon" Type="int" />
+          <Property Name="sun_even" Type="int" />
+          <Property Name="sun_night" Type="int" />
+          <Property Name="mon_morn" Type="int" />
+          <Property Name="mon_noon" Type="int" />
+          <Property Name="mon_even" Type="int" />
+          <Property Name="mon_night" Type="int" />
+          <Property Name="tue_morn" Type="int" />
+          <Property Name="tue_noon" Type="int" />
+          <Property Name="tue_even" Type="int" />
+          <Property Name="tue_night" Type="int" />
+          <Property Name="wed_morn" Type="int" />
+          <Property Name="wed_noon" Type="int" />
+          <Property Name="wed_even" Type="int" />
+          <Property Name="wed_night" Type="int" />
+          <Property Name="thr_morn" Type="int" />
+          <Property Name="thr_noon" Type="int" />
+          <Property Name="thr_even" Type="int" />
+          <Property Name="thr_night" Type="int" />
+          <Property Name="fri_morn" Type="int" />
+          <Property Name="fri_noon" Type="int" />
+          <Property Name="fri_even" Type="int" />
+          <Property Name="fri_night" Type="int" />
+          <Property Name="sat_morn" Type="int" />
+          <Property Name="sat_noon" Type="int" />
+          <Property Name="sat_even" Type="int" />
+          <Property Name="sat_night" Type="int" />
+          <Property Name="patient_id" Type="int" />
+        </EntityType>
+        <EntityType Name="Doctor">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="fname" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="lname" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="email" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="password" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="M_Schedule">
+          <Key>
+            <PropertyRef Name="s_id" />
+          </Key>
+          <Property Name="s_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="mon" Type="varchar" MaxLength="50" />
+          <Property Name="tue" Type="varchar" MaxLength="50" />
+          <Property Name="wed" Type="varchar" MaxLength="50" />
+          <Property Name="thr" Type="varchar" MaxLength="50" />
+          <Property Name="fri" Type="varchar" MaxLength="50" />
+          <Property Name="sat" Type="varchar" MaxLength="50" />
+          <Property Name="sun" Type="varchar" MaxLength="50" />
+          <Property Name="morn" Type="varchar" MaxLength="50" />
+          <Property Name="noon" Type="varchar" MaxLength="50" />
+          <Property Name="even" Type="varchar" MaxLength="50" />
+          <Property Name="night" Type="varchar" MaxLength="50" />
+          <Property Name="med_id" Type="int" />
+        </EntityType>
+        <EntityType Name="M_Schedule2">
+          <Key>
+            <PropertyRef Name="s_id" />
+          </Key>
+          <Property Name="s_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="mon" Type="varchar" MaxLength="50" />
+          <Property Name="tue" Type="varchar" MaxLength="50" />
+          <Property Name="wed" Type="varchar" MaxLength="50" />
+          <Property Name="thr" Type="varchar" MaxLength="50" />
+          <Property Name="fri" Type="varchar" MaxLength="50" />
+          <Property Name="sat" Type="varchar" MaxLength="50" />
+          <Property Name="sun" Type="varchar" MaxLength="50" />
+          <Property Name="morn" Type="varchar" MaxLength="50" />
+          <Property Name="noon" Type="varchar" MaxLength="50" />
+          <Property Name="even" Type="varchar" MaxLength="50" />
+          <Property Name="night" Type="varchar" MaxLength="50" />
+          <Property Name="med_id" Type="int" />
+        </EntityType>
+        <EntityType Name="Medicine">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="name" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="type" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="no_dosage" Type="int" />
+          <Property Name="patient_id" Type="int" />
+          <Property Name="doctor_id" Type="int" />
+          <Property Name="caretaker_id" Type="int" />
+          <Property Name="image" Type="varbinary(max)" />
+          <Property Name="color" Type="nvarchar" MaxLength="100" />
+          <Property Name="start_date" Type="nvarchar" MaxLength="100" />
+          <Property Name="end_date" Type="nvarchar" MaxLength="100" />
+          <Property Name="image_path" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="P_Schedule">
+          <Key>
+            <PropertyRef Name="ps_id" />
+          </Key>
+          <Property Name="ps_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="mon" Type="varchar" MaxLength="50" />
+          <Property Name="tue" Type="varchar" MaxLength="50" />
+          <Property Name="wed" Type="varchar" MaxLength="50" />
+          <Property Name="thr" Type="varchar" MaxLength="50" />
+          <Property Name="fri" Type="varchar" MaxLength="50" />
+          <Property Name="sat" Type="varchar" MaxLength="50" />
+          <Property Name="sun" Type="varchar" MaxLength="50" />
+          <Property Name="morn" Type="varchar" MaxLength="50" />
+          <Property Name="noon" Type="varchar" MaxLength="50" />
+          <Property Name="even" Type="varchar" MaxLength="50" />
+          <Property Name="night" Type="varchar" MaxLength="50" />
+          <Property Name="pres_id" Type="int" />
+        </EntityType>
+        <EntityType Name="Patient">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="fname" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="lname" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="email" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="password" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="doctor_id" Type="int" />
+          <Property Name="state" Type="nvarchar" MaxLength="100" />
+          <Property Name="state2" Type="nvarchar" MaxLength="100" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6013: The table/view 'Pill_Reminder_System.dbo.Patient_Activity' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="Patient_Activity">
+          <Property Name="no_canceled" Type="int" />
+          <Property Name="no_taken" Type="int" />
+          <Property Name="no_snoozed" Type="int" />
+          <Property Name="caretaker_id" Type="int" />
+          <Property Name="patient_id" Type="int" />
+          <Property Name="datetime" Type="varchar" MaxLength="200" />
+        </EntityType>-->
+        <EntityType Name="Patient_CareTaker">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="caretaker_id" Type="int" />
+          <Property Name="patient_id" Type="int" />
+          <Property Name="priority" Type="int" />
+          <Property Name="status" Type="nvarchar" MaxLength="100" />
+          <Property Name="status2" Type="nvarchar" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="Prescription">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="med_name" Type="nvarchar" MaxLength="50" />
+          <Property Name="med_type" Type="nvarchar" MaxLength="50" />
+          <Property Name="start_date" Type="nvarchar" MaxLength="50" />
+          <Property Name="doctor_id" Type="int" />
+          <Property Name="patient_id" Type="int" />
+          <Property Name="end_date" Type="nvarchar" MaxLength="100" />
+          <Property Name="no_dosage" Type="int" />
+          <Property Name="Weight" Type="int" />
+        </EntityType>
+        <Association Name="FK__Dispenser__patie__318258D2">
+          <End Role="Patient" Type="Self.Patient" Multiplicity="0..1" />
+          <End Role="Dispenser2" Type="Self.Dispenser2" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Patient">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Dispenser2">
+              <PropertyRef Name="patient_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Dispenser__patie__76619304">
+          <End Role="Patient" Type="Self.Patient" Multiplicity="0..1" />
+          <End Role="Dispenser" Type="Self.Dispenser" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Patient">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Dispenser">
+              <PropertyRef Name="patient_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__M_Schedul__med_i__2EA5EC27">
+          <End Role="Medicine" Type="Self.Medicine" Multiplicity="0..1" />
+          <End Role="M_Schedule2" Type="Self.M_Schedule2" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Medicine">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="M_Schedule2">
+              <PropertyRef Name="med_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Medicine__careta__2180FB33">
+          <End Role="CareTaker" Type="Self.CareTaker" Multiplicity="0..1" />
+          <End Role="Medicine" Type="Self.Medicine" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CareTaker">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Medicine">
+              <PropertyRef Name="caretaker_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Medicine__doctor__22751F6C">
+          <End Role="Doctor" Type="Self.Doctor" Multiplicity="0..1" />
+          <End Role="Medicine" Type="Self.Medicine" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Doctor">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Medicine">
+              <PropertyRef Name="doctor_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Medicine__patien__208CD6FA">
+          <End Role="Patient" Type="Self.Patient" Multiplicity="0..1" />
+          <End Role="Medicine" Type="Self.Medicine" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Patient">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Medicine">
+              <PropertyRef Name="patient_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__P_Schedul__pres___4F47C5E3">
+          <End Role="Prescription" Type="Self.Prescription" Multiplicity="0..1" />
+          <End Role="P_Schedule" Type="Self.P_Schedule" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Prescription">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="P_Schedule">
+              <PropertyRef Name="pres_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Patient__doctor___1AD3FDA4">
+          <End Role="Doctor" Type="Self.Doctor" Multiplicity="0..1" />
+          <End Role="Patient" Type="Self.Patient" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Doctor">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Patient">
+              <PropertyRef Name="doctor_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <!--Errors Found During Generation:
+error 6004: The table 'Pill_Reminder_System.dbo.Patient_Activity' is referenced by a relationship, but cannot be found.
+        <Association Name="FK__Patient_A__caret__1CBC4616" />-->
+        <!--Errors Found During Generation:
+error 6004: The table 'Pill_Reminder_System.dbo.Patient_Activity' is referenced by a relationship, but cannot be found.
+        <Association Name="FK__Patient_A__patie__1DB06A4F" />-->
+        <Association Name="FK__Patient_C__caret__1F63A897">
+          <End Role="CareTaker" Type="Self.CareTaker" Multiplicity="0..1" />
+          <End Role="Patient_CareTaker" Type="Self.Patient_CareTaker" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CareTaker">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Patient_CareTaker">
+              <PropertyRef Name="caretaker_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Patient_C__patie__2057CCD0">
+          <End Role="Patient" Type="Self.Patient" Multiplicity="0..1" />
+          <End Role="Patient_CareTaker" Type="Self.Patient_CareTaker" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Patient">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Patient_CareTaker">
+              <PropertyRef Name="patient_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Prescript__docto__2A164134">
+          <End Role="Doctor" Type="Self.Doctor" Multiplicity="0..1" />
+          <End Role="Prescription" Type="Self.Prescription" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Doctor">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Prescription">
+              <PropertyRef Name="doctor_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Prescript__patie__29221CFB">
+          <End Role="Patient" Type="Self.Patient" Multiplicity="0..1" />
+          <End Role="Prescription" Type="Self.Prescription" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Patient">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Prescription">
+              <PropertyRef Name="patient_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Schedule__med_id__3D2915A8">
+          <End Role="Medicine" Type="Self.Medicine" Multiplicity="0..1" />
+          <End Role="M_Schedule" Type="Self.M_Schedule" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Medicine">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="M_Schedule">
+              <PropertyRef Name="med_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="Pill_Reminder_SystemModelStoreContainer">
+          <EntitySet Name="CareTaker" EntityType="Self.CareTaker" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Dispenser" EntityType="Self.Dispenser" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Dispenser2" EntityType="Self.Dispenser2" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Doctor" EntityType="Self.Doctor" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="M_Schedule" EntityType="Self.M_Schedule" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="M_Schedule2" EntityType="Self.M_Schedule2" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Medicine" EntityType="Self.Medicine" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="P_Schedule" EntityType="Self.P_Schedule" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Patient" EntityType="Self.Patient" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Patient_CareTaker" EntityType="Self.Patient_CareTaker" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Prescription" EntityType="Self.Prescription" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK__Dispenser__patie__318258D2" Association="Self.FK__Dispenser__patie__318258D2">
+            <End Role="Patient" EntitySet="Patient" />
+            <End Role="Dispenser2" EntitySet="Dispenser2" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Dispenser__patie__76619304" Association="Self.FK__Dispenser__patie__76619304">
+            <End Role="Patient" EntitySet="Patient" />
+            <End Role="Dispenser" EntitySet="Dispenser" />
+          </AssociationSet>
+          <AssociationSet Name="FK__M_Schedul__med_i__2EA5EC27" Association="Self.FK__M_Schedul__med_i__2EA5EC27">
+            <End Role="Medicine" EntitySet="Medicine" />
+            <End Role="M_Schedule2" EntitySet="M_Schedule2" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Medicine__careta__2180FB33" Association="Self.FK__Medicine__careta__2180FB33">
+            <End Role="CareTaker" EntitySet="CareTaker" />
+            <End Role="Medicine" EntitySet="Medicine" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Medicine__doctor__22751F6C" Association="Self.FK__Medicine__doctor__22751F6C">
+            <End Role="Doctor" EntitySet="Doctor" />
+            <End Role="Medicine" EntitySet="Medicine" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Medicine__patien__208CD6FA" Association="Self.FK__Medicine__patien__208CD6FA">
+            <End Role="Patient" EntitySet="Patient" />
+            <End Role="Medicine" EntitySet="Medicine" />
+          </AssociationSet>
+          <AssociationSet Name="FK__P_Schedul__pres___4F47C5E3" Association="Self.FK__P_Schedul__pres___4F47C5E3">
+            <End Role="Prescription" EntitySet="Prescription" />
+            <End Role="P_Schedule" EntitySet="P_Schedule" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Patient__doctor___1AD3FDA4" Association="Self.FK__Patient__doctor___1AD3FDA4">
+            <End Role="Doctor" EntitySet="Doctor" />
+            <End Role="Patient" EntitySet="Patient" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Patient_C__caret__1F63A897" Association="Self.FK__Patient_C__caret__1F63A897">
+            <End Role="CareTaker" EntitySet="CareTaker" />
+            <End Role="Patient_CareTaker" EntitySet="Patient_CareTaker" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Patient_C__patie__2057CCD0" Association="Self.FK__Patient_C__patie__2057CCD0">
+            <End Role="Patient" EntitySet="Patient" />
+            <End Role="Patient_CareTaker" EntitySet="Patient_CareTaker" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Prescript__docto__2A164134" Association="Self.FK__Prescript__docto__2A164134">
+            <End Role="Doctor" EntitySet="Doctor" />
+            <End Role="Prescription" EntitySet="Prescription" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Prescript__patie__29221CFB" Association="Self.FK__Prescript__patie__29221CFB">
+            <End Role="Patient" EntitySet="Patient" />
+            <End Role="Prescription" EntitySet="Prescription" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Schedule__med_id__3D2915A8" Association="Self.FK__Schedule__med_id__3D2915A8">
+            <End Role="Medicine" EntitySet="Medicine" />
+            <End Role="M_Schedule" EntitySet="M_Schedule" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="Pill_Reminder_SystemModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="CareTaker">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="fname" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="lname" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="password" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="Medicines" Relationship="Self.FK__Medicine__careta__2180FB33" FromRole="CareTaker" ToRole="Medicine" />
+          <NavigationProperty Name="Patient_CareTaker" Relationship="Self.FK__Patient_C__caret__1F63A897" FromRole="CareTaker" ToRole="Patient_CareTaker" />
+        </EntityType>
+        <EntityType Name="Dispenser">
+          <Key>
+            <PropertyRef Name="disp_id" />
+          </Key>
+          <Property Name="disp_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="sun_morn" Type="Int32" />
+          <Property Name="sun_noon" Type="Int32" />
+          <Property Name="sun_even" Type="Int32" />
+          <Property Name="sun_night" Type="Int32" />
+          <Property Name="mon_morn" Type="Int32" />
+          <Property Name="mon_noon" Type="Int32" />
+          <Property Name="mon_even" Type="Int32" />
+          <Property Name="mon_night" Type="Int32" />
+          <Property Name="tue_morn" Type="Int32" />
+          <Property Name="tue_noon" Type="Int32" />
+          <Property Name="tue_even" Type="Int32" />
+          <Property Name="tue_night" Type="Int32" />
+          <Property Name="wed_morn" Type="Int32" />
+          <Property Name="wed_noon" Type="Int32" />
+          <Property Name="wed_even" Type="Int32" />
+          <Property Name="wed_night" Type="Int32" />
+          <Property Name="thr_morn" Type="Int32" />
+          <Property Name="thr_noon" Type="Int32" />
+          <Property Name="thr_even" Type="Int32" />
+          <Property Name="thr_night" Type="Int32" />
+          <Property Name="fri_morn" Type="Int32" />
+          <Property Name="fri_noon" Type="Int32" />
+          <Property Name="fri_even" Type="Int32" />
+          <Property Name="fri_night" Type="Int32" />
+          <Property Name="sat_morn" Type="Int32" />
+          <Property Name="sat_noon" Type="Int32" />
+          <Property Name="sat_even" Type="Int32" />
+          <Property Name="sat_night" Type="Int32" />
+          <Property Name="patient_id" Type="Int32" />
+          <NavigationProperty Name="Patient" Relationship="Self.FK__Dispenser__patie__76619304" FromRole="Dispenser" ToRole="Patient" />
+        </EntityType>
+        <EntityType Name="Dispenser2">
+          <Key>
+            <PropertyRef Name="disp_id" />
+          </Key>
+          <Property Name="disp_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="sun_morn" Type="Int32" />
+          <Property Name="sun_noon" Type="Int32" />
+          <Property Name="sun_even" Type="Int32" />
+          <Property Name="sun_night" Type="Int32" />
+          <Property Name="mon_morn" Type="Int32" />
+          <Property Name="mon_noon" Type="Int32" />
+          <Property Name="mon_even" Type="Int32" />
+          <Property Name="mon_night" Type="Int32" />
+          <Property Name="tue_morn" Type="Int32" />
+          <Property Name="tue_noon" Type="Int32" />
+          <Property Name="tue_even" Type="Int32" />
+          <Property Name="tue_night" Type="Int32" />
+          <Property Name="wed_morn" Type="Int32" />
+          <Property Name="wed_noon" Type="Int32" />
+          <Property Name="wed_even" Type="Int32" />
+          <Property Name="wed_night" Type="Int32" />
+          <Property Name="thr_morn" Type="Int32" />
+          <Property Name="thr_noon" Type="Int32" />
+          <Property Name="thr_even" Type="Int32" />
+          <Property Name="thr_night" Type="Int32" />
+          <Property Name="fri_morn" Type="Int32" />
+          <Property Name="fri_noon" Type="Int32" />
+          <Property Name="fri_even" Type="Int32" />
+          <Property Name="fri_night" Type="Int32" />
+          <Property Name="sat_morn" Type="Int32" />
+          <Property Name="sat_noon" Type="Int32" />
+          <Property Name="sat_even" Type="Int32" />
+          <Property Name="sat_night" Type="Int32" />
+          <Property Name="patient_id" Type="Int32" />
+          <NavigationProperty Name="Patient" Relationship="Self.FK__Dispenser__patie__318258D2" FromRole="Dispenser2" ToRole="Patient" />
+        </EntityType>
+        <EntityType Name="Doctor">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="fname" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="lname" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="password" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="Medicines" Relationship="Self.FK__Medicine__doctor__22751F6C" FromRole="Doctor" ToRole="Medicine" />
+          <NavigationProperty Name="Patients" Relationship="Self.FK__Patient__doctor___1AD3FDA4" FromRole="Doctor" ToRole="Patient" />
+          <NavigationProperty Name="Prescriptions" Relationship="Self.FK__Prescript__docto__2A164134" FromRole="Doctor" ToRole="Prescription" />
+        </EntityType>
+        <EntityType Name="M_Schedule">
+          <Key>
+            <PropertyRef Name="s_id" />
+          </Key>
+          <Property Name="s_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="mon" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="tue" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="wed" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="thr" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="fri" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="sat" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="sun" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="morn" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="noon" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="even" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="night" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="med_id" Type="Int32" />
+          <NavigationProperty Name="Medicine" Relationship="Self.FK__Schedule__med_id__3D2915A8" FromRole="M_Schedule" ToRole="Medicine" />
+        </EntityType>
+        <EntityType Name="M_Schedule2">
+          <Key>
+            <PropertyRef Name="s_id" />
+          </Key>
+          <Property Name="s_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="mon" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="tue" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="wed" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="thr" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="fri" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="sat" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="sun" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="morn" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="noon" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="even" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="night" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="med_id" Type="Int32" />
+          <NavigationProperty Name="Medicine" Relationship="Self.FK__M_Schedul__med_i__2EA5EC27" FromRole="M_Schedule2" ToRole="Medicine" />
+        </EntityType>
+        <EntityType Name="Medicine">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="type" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="no_dosage" Type="Int32" />
+          <Property Name="patient_id" Type="Int32" />
+          <Property Name="doctor_id" Type="Int32" />
+          <Property Name="caretaker_id" Type="Int32" />
+          <Property Name="image" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="color" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="start_date" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="end_date" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="image_path" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="CareTaker" Relationship="Self.FK__Medicine__careta__2180FB33" FromRole="Medicine" ToRole="CareTaker" />
+          <NavigationProperty Name="Doctor" Relationship="Self.FK__Medicine__doctor__22751F6C" FromRole="Medicine" ToRole="Doctor" />
+          <NavigationProperty Name="M_Schedule" Relationship="Self.FK__Schedule__med_id__3D2915A8" FromRole="Medicine" ToRole="M_Schedule" />
+          <NavigationProperty Name="M_Schedule2" Relationship="Self.FK__M_Schedul__med_i__2EA5EC27" FromRole="Medicine" ToRole="M_Schedule2" />
+          <NavigationProperty Name="Patient" Relationship="Self.FK__Medicine__patien__208CD6FA" FromRole="Medicine" ToRole="Patient" />
+        </EntityType>
+        <EntityType Name="P_Schedule">
+          <Key>
+            <PropertyRef Name="ps_id" />
+          </Key>
+          <Property Name="ps_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="mon" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="tue" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="wed" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="thr" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="fri" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="sat" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="sun" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="morn" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="noon" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="even" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="night" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="pres_id" Type="Int32" />
+          <NavigationProperty Name="Prescription" Relationship="Self.FK__P_Schedul__pres___4F47C5E3" FromRole="P_Schedule" ToRole="Prescription" />
+        </EntityType>
+        <EntityType Name="Patient">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="fname" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="lname" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="password" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="doctor_id" Type="Int32" />
+          <Property Name="state" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="state2" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Dispensers" Relationship="Self.FK__Dispenser__patie__76619304" FromRole="Patient" ToRole="Dispenser" />
+          <NavigationProperty Name="Dispenser2" Relationship="Self.FK__Dispenser__patie__318258D2" FromRole="Patient" ToRole="Dispenser2" />
+          <NavigationProperty Name="Doctor" Relationship="Self.FK__Patient__doctor___1AD3FDA4" FromRole="Patient" ToRole="Doctor" />
+          <NavigationProperty Name="Medicines" Relationship="Self.FK__Medicine__patien__208CD6FA" FromRole="Patient" ToRole="Medicine" />
+          <NavigationProperty Name="Patient_CareTaker" Relationship="Self.FK__Patient_C__patie__2057CCD0" FromRole="Patient" ToRole="Patient_CareTaker" />
+          <NavigationProperty Name="Prescriptions" Relationship="Self.FK__Prescript__patie__29221CFB" FromRole="Patient" ToRole="Prescription" />
+        </EntityType>
+        <EntityType Name="Patient_CareTaker">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="caretaker_id" Type="Int32" />
+          <Property Name="patient_id" Type="Int32" />
+          <Property Name="priority" Type="Int32" />
+          <Property Name="status" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="status2" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="CareTaker" Relationship="Self.FK__Patient_C__caret__1F63A897" FromRole="Patient_CareTaker" ToRole="CareTaker" />
+          <NavigationProperty Name="Patient" Relationship="Self.FK__Patient_C__patie__2057CCD0" FromRole="Patient_CareTaker" ToRole="Patient" />
+        </EntityType>
+        <EntityType Name="Prescription">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="med_name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="med_type" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="start_date" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="doctor_id" Type="Int32" />
+          <Property Name="patient_id" Type="Int32" />
+          <Property Name="end_date" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="no_dosage" Type="Int32" />
+          <Property Name="Weight" Type="Int32" />
+          <NavigationProperty Name="Doctor" Relationship="Self.FK__Prescript__docto__2A164134" FromRole="Prescription" ToRole="Doctor" />
+          <NavigationProperty Name="P_Schedule" Relationship="Self.FK__P_Schedul__pres___4F47C5E3" FromRole="Prescription" ToRole="P_Schedule" />
+          <NavigationProperty Name="Patient" Relationship="Self.FK__Prescript__patie__29221CFB" FromRole="Prescription" ToRole="Patient" />
+        </EntityType>
+        <Association Name="FK__Medicine__careta__2180FB33">
+          <End Role="CareTaker" Type="Self.CareTaker" Multiplicity="0..1" />
+          <End Role="Medicine" Type="Self.Medicine" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CareTaker">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Medicine">
+              <PropertyRef Name="caretaker_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Patient_C__caret__1F63A897">
+          <End Role="CareTaker" Type="Self.CareTaker" Multiplicity="0..1" />
+          <End Role="Patient_CareTaker" Type="Self.Patient_CareTaker" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CareTaker">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Patient_CareTaker">
+              <PropertyRef Name="caretaker_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Dispenser__patie__76619304">
+          <End Role="Patient" Type="Self.Patient" Multiplicity="0..1" />
+          <End Role="Dispenser" Type="Self.Dispenser" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Patient">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Dispenser">
+              <PropertyRef Name="patient_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Dispenser__patie__318258D2">
+          <End Role="Patient" Type="Self.Patient" Multiplicity="0..1" />
+          <End Role="Dispenser2" Type="Self.Dispenser2" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Patient">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Dispenser2">
+              <PropertyRef Name="patient_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Medicine__doctor__22751F6C">
+          <End Role="Doctor" Type="Self.Doctor" Multiplicity="0..1" />
+          <End Role="Medicine" Type="Self.Medicine" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Doctor">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Medicine">
+              <PropertyRef Name="doctor_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Patient__doctor___1AD3FDA4">
+          <End Role="Doctor" Type="Self.Doctor" Multiplicity="0..1" />
+          <End Role="Patient" Type="Self.Patient" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Doctor">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Patient">
+              <PropertyRef Name="doctor_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Prescript__docto__2A164134">
+          <End Role="Doctor" Type="Self.Doctor" Multiplicity="0..1" />
+          <End Role="Prescription" Type="Self.Prescription" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Doctor">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Prescription">
+              <PropertyRef Name="doctor_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Schedule__med_id__3D2915A8">
+          <End Role="Medicine" Type="Self.Medicine" Multiplicity="0..1" />
+          <End Role="M_Schedule" Type="Self.M_Schedule" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Medicine">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="M_Schedule">
+              <PropertyRef Name="med_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__M_Schedul__med_i__2EA5EC27">
+          <End Role="Medicine" Type="Self.Medicine" Multiplicity="0..1" />
+          <End Role="M_Schedule2" Type="Self.M_Schedule2" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Medicine">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="M_Schedule2">
+              <PropertyRef Name="med_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Medicine__patien__208CD6FA">
+          <End Role="Patient" Type="Self.Patient" Multiplicity="0..1" />
+          <End Role="Medicine" Type="Self.Medicine" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Patient">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Medicine">
+              <PropertyRef Name="patient_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__P_Schedul__pres___4F47C5E3">
+          <End Role="Prescription" Type="Self.Prescription" Multiplicity="0..1" />
+          <End Role="P_Schedule" Type="Self.P_Schedule" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Prescription">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="P_Schedule">
+              <PropertyRef Name="pres_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Patient_C__patie__2057CCD0">
+          <End Role="Patient" Type="Self.Patient" Multiplicity="0..1" />
+          <End Role="Patient_CareTaker" Type="Self.Patient_CareTaker" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Patient">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Patient_CareTaker">
+              <PropertyRef Name="patient_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Prescript__patie__29221CFB">
+          <End Role="Patient" Type="Self.Patient" Multiplicity="0..1" />
+          <End Role="Prescription" Type="Self.Prescription" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Patient">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Prescription">
+              <PropertyRef Name="patient_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="Pill_Reminder_SystemEntities1" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="CareTakers" EntityType="Self.CareTaker" />
+          <EntitySet Name="Dispensers" EntityType="Self.Dispenser" />
+          <EntitySet Name="Dispenser2" EntityType="Self.Dispenser2" />
+          <EntitySet Name="Doctors" EntityType="Self.Doctor" />
+          <EntitySet Name="M_Schedule" EntityType="Self.M_Schedule" />
+          <EntitySet Name="M_Schedule2" EntityType="Self.M_Schedule2" />
+          <EntitySet Name="Medicines" EntityType="Self.Medicine" />
+          <EntitySet Name="P_Schedule" EntityType="Self.P_Schedule" />
+          <EntitySet Name="Patients" EntityType="Self.Patient" />
+          <EntitySet Name="Patient_CareTaker" EntityType="Self.Patient_CareTaker" />
+          <EntitySet Name="Prescriptions" EntityType="Self.Prescription" />
+          <AssociationSet Name="FK__Medicine__careta__2180FB33" Association="Self.FK__Medicine__careta__2180FB33">
+            <End Role="CareTaker" EntitySet="CareTakers" />
+            <End Role="Medicine" EntitySet="Medicines" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Patient_C__caret__1F63A897" Association="Self.FK__Patient_C__caret__1F63A897">
+            <End Role="CareTaker" EntitySet="CareTakers" />
+            <End Role="Patient_CareTaker" EntitySet="Patient_CareTaker" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Dispenser__patie__76619304" Association="Self.FK__Dispenser__patie__76619304">
+            <End Role="Patient" EntitySet="Patients" />
+            <End Role="Dispenser" EntitySet="Dispensers" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Dispenser__patie__318258D2" Association="Self.FK__Dispenser__patie__318258D2">
+            <End Role="Patient" EntitySet="Patients" />
+            <End Role="Dispenser2" EntitySet="Dispenser2" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Medicine__doctor__22751F6C" Association="Self.FK__Medicine__doctor__22751F6C">
+            <End Role="Doctor" EntitySet="Doctors" />
+            <End Role="Medicine" EntitySet="Medicines" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Patient__doctor___1AD3FDA4" Association="Self.FK__Patient__doctor___1AD3FDA4">
+            <End Role="Doctor" EntitySet="Doctors" />
+            <End Role="Patient" EntitySet="Patients" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Prescript__docto__2A164134" Association="Self.FK__Prescript__docto__2A164134">
+            <End Role="Doctor" EntitySet="Doctors" />
+            <End Role="Prescription" EntitySet="Prescriptions" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Schedule__med_id__3D2915A8" Association="Self.FK__Schedule__med_id__3D2915A8">
+            <End Role="Medicine" EntitySet="Medicines" />
+            <End Role="M_Schedule" EntitySet="M_Schedule" />
+          </AssociationSet>
+          <AssociationSet Name="FK__M_Schedul__med_i__2EA5EC27" Association="Self.FK__M_Schedul__med_i__2EA5EC27">
+            <End Role="Medicine" EntitySet="Medicines" />
+            <End Role="M_Schedule2" EntitySet="M_Schedule2" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Medicine__patien__208CD6FA" Association="Self.FK__Medicine__patien__208CD6FA">
+            <End Role="Patient" EntitySet="Patients" />
+            <End Role="Medicine" EntitySet="Medicines" />
+          </AssociationSet>
+          <AssociationSet Name="FK__P_Schedul__pres___4F47C5E3" Association="Self.FK__P_Schedul__pres___4F47C5E3">
+            <End Role="Prescription" EntitySet="Prescriptions" />
+            <End Role="P_Schedule" EntitySet="P_Schedule" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Patient_C__patie__2057CCD0" Association="Self.FK__Patient_C__patie__2057CCD0">
+            <End Role="Patient" EntitySet="Patients" />
+            <End Role="Patient_CareTaker" EntitySet="Patient_CareTaker" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Prescript__patie__29221CFB" Association="Self.FK__Prescript__patie__29221CFB">
+            <End Role="Patient" EntitySet="Patients" />
+            <End Role="Prescription" EntitySet="Prescriptions" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="Pill_Reminder_SystemModelStoreContainer" CdmEntityContainer="Pill_Reminder_SystemEntities1">
+          <EntitySetMapping Name="CareTakers">
+            <EntityTypeMapping TypeName="Pill_Reminder_SystemModel.CareTaker">
+              <MappingFragment StoreEntitySet="CareTaker">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="fname" ColumnName="fname" />
+                <ScalarProperty Name="lname" ColumnName="lname" />
+                <ScalarProperty Name="email" ColumnName="email" />
+                <ScalarProperty Name="password" ColumnName="password" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Dispensers">
+            <EntityTypeMapping TypeName="Pill_Reminder_SystemModel.Dispenser">
+              <MappingFragment StoreEntitySet="Dispenser">
+                <ScalarProperty Name="disp_id" ColumnName="disp_id" />
+                <ScalarProperty Name="sun_morn" ColumnName="sun_morn" />
+                <ScalarProperty Name="sun_noon" ColumnName="sun_noon" />
+                <ScalarProperty Name="sun_even" ColumnName="sun_even" />
+                <ScalarProperty Name="sun_night" ColumnName="sun_night" />
+                <ScalarProperty Name="mon_morn" ColumnName="mon_morn" />
+                <ScalarProperty Name="mon_noon" ColumnName="mon_noon" />
+                <ScalarProperty Name="mon_even" ColumnName="mon_even" />
+                <ScalarProperty Name="mon_night" ColumnName="mon_night" />
+                <ScalarProperty Name="tue_morn" ColumnName="tue_morn" />
+                <ScalarProperty Name="tue_noon" ColumnName="tue_noon" />
+                <ScalarProperty Name="tue_even" ColumnName="tue_even" />
+                <ScalarProperty Name="tue_night" ColumnName="tue_night" />
+                <ScalarProperty Name="wed_morn" ColumnName="wed_morn" />
+                <ScalarProperty Name="wed_noon" ColumnName="wed_noon" />
+                <ScalarProperty Name="wed_even" ColumnName="wed_even" />
+                <ScalarProperty Name="wed_night" ColumnName="wed_night" />
+                <ScalarProperty Name="thr_morn" ColumnName="thr_morn" />
+                <ScalarProperty Name="thr_noon" ColumnName="thr_noon" />
+                <ScalarProperty Name="thr_even" ColumnName="thr_even" />
+                <ScalarProperty Name="thr_night" ColumnName="thr_night" />
+                <ScalarProperty Name="fri_morn" ColumnName="fri_morn" />
+                <ScalarProperty Name="fri_noon" ColumnName="fri_noon" />
+                <ScalarProperty Name="fri_even" ColumnName="fri_even" />
+                <ScalarProperty Name="fri_night" ColumnName="fri_night" />
+                <ScalarProperty Name="sat_morn" ColumnName="sat_morn" />
+                <ScalarProperty Name="sat_noon" ColumnName="sat_noon" />
+                <ScalarProperty Name="sat_even" ColumnName="sat_even" />
+                <ScalarProperty Name="sat_night" ColumnName="sat_night" />
+                <ScalarProperty Name="patient_id" ColumnName="patient_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Dispenser2">
+            <EntityTypeMapping TypeName="Pill_Reminder_SystemModel.Dispenser2">
+              <MappingFragment StoreEntitySet="Dispenser2">
+                <ScalarProperty Name="disp_id" ColumnName="disp_id" />
+                <ScalarProperty Name="sun_morn" ColumnName="sun_morn" />
+                <ScalarProperty Name="sun_noon" ColumnName="sun_noon" />
+                <ScalarProperty Name="sun_even" ColumnName="sun_even" />
+                <ScalarProperty Name="sun_night" ColumnName="sun_night" />
+                <ScalarProperty Name="mon_morn" ColumnName="mon_morn" />
+                <ScalarProperty Name="mon_noon" ColumnName="mon_noon" />
+                <ScalarProperty Name="mon_even" ColumnName="mon_even" />
+                <ScalarProperty Name="mon_night" ColumnName="mon_night" />
+                <ScalarProperty Name="tue_morn" ColumnName="tue_morn" />
+                <ScalarProperty Name="tue_noon" ColumnName="tue_noon" />
+                <ScalarProperty Name="tue_even" ColumnName="tue_even" />
+                <ScalarProperty Name="tue_night" ColumnName="tue_night" />
+                <ScalarProperty Name="wed_morn" ColumnName="wed_morn" />
+                <ScalarProperty Name="wed_noon" ColumnName="wed_noon" />
+                <ScalarProperty Name="wed_even" ColumnName="wed_even" />
+                <ScalarProperty Name="wed_night" ColumnName="wed_night" />
+                <ScalarProperty Name="thr_morn" ColumnName="thr_morn" />
+                <ScalarProperty Name="thr_noon" ColumnName="thr_noon" />
+                <ScalarProperty Name="thr_even" ColumnName="thr_even" />
+                <ScalarProperty Name="thr_night" ColumnName="thr_night" />
+                <ScalarProperty Name="fri_morn" ColumnName="fri_morn" />
+                <ScalarProperty Name="fri_noon" ColumnName="fri_noon" />
+                <ScalarProperty Name="fri_even" ColumnName="fri_even" />
+                <ScalarProperty Name="fri_night" ColumnName="fri_night" />
+                <ScalarProperty Name="sat_morn" ColumnName="sat_morn" />
+                <ScalarProperty Name="sat_noon" ColumnName="sat_noon" />
+                <ScalarProperty Name="sat_even" ColumnName="sat_even" />
+                <ScalarProperty Name="sat_night" ColumnName="sat_night" />
+                <ScalarProperty Name="patient_id" ColumnName="patient_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Doctors">
+            <EntityTypeMapping TypeName="Pill_Reminder_SystemModel.Doctor">
+              <MappingFragment StoreEntitySet="Doctor">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="fname" ColumnName="fname" />
+                <ScalarProperty Name="lname" ColumnName="lname" />
+                <ScalarProperty Name="email" ColumnName="email" />
+                <ScalarProperty Name="password" ColumnName="password" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="M_Schedule">
+            <EntityTypeMapping TypeName="Pill_Reminder_SystemModel.M_Schedule">
+              <MappingFragment StoreEntitySet="M_Schedule">
+                <ScalarProperty Name="s_id" ColumnName="s_id" />
+                <ScalarProperty Name="mon" ColumnName="mon" />
+                <ScalarProperty Name="tue" ColumnName="tue" />
+                <ScalarProperty Name="wed" ColumnName="wed" />
+                <ScalarProperty Name="thr" ColumnName="thr" />
+                <ScalarProperty Name="fri" ColumnName="fri" />
+                <ScalarProperty Name="sat" ColumnName="sat" />
+                <ScalarProperty Name="sun" ColumnName="sun" />
+                <ScalarProperty Name="morn" ColumnName="morn" />
+                <ScalarProperty Name="noon" ColumnName="noon" />
+                <ScalarProperty Name="even" ColumnName="even" />
+                <ScalarProperty Name="night" ColumnName="night" />
+                <ScalarProperty Name="med_id" ColumnName="med_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="M_Schedule2">
+            <EntityTypeMapping TypeName="Pill_Reminder_SystemModel.M_Schedule2">
+              <MappingFragment StoreEntitySet="M_Schedule2">
+                <ScalarProperty Name="s_id" ColumnName="s_id" />
+                <ScalarProperty Name="mon" ColumnName="mon" />
+                <ScalarProperty Name="tue" ColumnName="tue" />
+                <ScalarProperty Name="wed" ColumnName="wed" />
+                <ScalarProperty Name="thr" ColumnName="thr" />
+                <ScalarProperty Name="fri" ColumnName="fri" />
+                <ScalarProperty Name="sat" ColumnName="sat" />
+                <ScalarProperty Name="sun" ColumnName="sun" />
+                <ScalarProperty Name="morn" ColumnName="morn" />
+                <ScalarProperty Name="noon" ColumnName="noon" />
+                <ScalarProperty Name="even" ColumnName="even" />
+                <ScalarProperty Name="night" ColumnName="night" />
+                <ScalarProperty Name="med_id" ColumnName="med_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Medicines">
+            <EntityTypeMapping TypeName="Pill_Reminder_SystemModel.Medicine">
+              <MappingFragment StoreEntitySet="Medicine">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="type" ColumnName="type" />
+                <ScalarProperty Name="no_dosage" ColumnName="no_dosage" />
+                <ScalarProperty Name="patient_id" ColumnName="patient_id" />
+                <ScalarProperty Name="doctor_id" ColumnName="doctor_id" />
+                <ScalarProperty Name="caretaker_id" ColumnName="caretaker_id" />
+                <ScalarProperty Name="image" ColumnName="image" />
+                <ScalarProperty Name="color" ColumnName="color" />
+                <ScalarProperty Name="start_date" ColumnName="start_date" />
+                <ScalarProperty Name="end_date" ColumnName="end_date" />
+                <ScalarProperty Name="image_path" ColumnName="image_path" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="P_Schedule">
+            <EntityTypeMapping TypeName="Pill_Reminder_SystemModel.P_Schedule">
+              <MappingFragment StoreEntitySet="P_Schedule">
+                <ScalarProperty Name="ps_id" ColumnName="ps_id" />
+                <ScalarProperty Name="mon" ColumnName="mon" />
+                <ScalarProperty Name="tue" ColumnName="tue" />
+                <ScalarProperty Name="wed" ColumnName="wed" />
+                <ScalarProperty Name="thr" ColumnName="thr" />
+                <ScalarProperty Name="fri" ColumnName="fri" />
+                <ScalarProperty Name="sat" ColumnName="sat" />
+                <ScalarProperty Name="sun" ColumnName="sun" />
+                <ScalarProperty Name="morn" ColumnName="morn" />
+                <ScalarProperty Name="noon" ColumnName="noon" />
+                <ScalarProperty Name="even" ColumnName="even" />
+                <ScalarProperty Name="night" ColumnName="night" />
+                <ScalarProperty Name="pres_id" ColumnName="pres_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Patients">
+            <EntityTypeMapping TypeName="Pill_Reminder_SystemModel.Patient">
+              <MappingFragment StoreEntitySet="Patient">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="fname" ColumnName="fname" />
+                <ScalarProperty Name="lname" ColumnName="lname" />
+                <ScalarProperty Name="email" ColumnName="email" />
+                <ScalarProperty Name="password" ColumnName="password" />
+                <ScalarProperty Name="doctor_id" ColumnName="doctor_id" />
+                <ScalarProperty Name="state" ColumnName="state" />
+                <ScalarProperty Name="state2" ColumnName="state2" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Patient_CareTaker">
+            <EntityTypeMapping TypeName="Pill_Reminder_SystemModel.Patient_CareTaker">
+              <MappingFragment StoreEntitySet="Patient_CareTaker">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="caretaker_id" ColumnName="caretaker_id" />
+                <ScalarProperty Name="patient_id" ColumnName="patient_id" />
+                <ScalarProperty Name="priority" ColumnName="priority" />
+                <ScalarProperty Name="status" ColumnName="status" />
+                <ScalarProperty Name="status2" ColumnName="status2" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Prescriptions">
+            <EntityTypeMapping TypeName="Pill_Reminder_SystemModel.Prescription">
+              <MappingFragment StoreEntitySet="Prescription">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="med_name" ColumnName="med_name" />
+                <ScalarProperty Name="med_type" ColumnName="med_type" />
+                <ScalarProperty Name="start_date" ColumnName="start_date" />
+                <ScalarProperty Name="doctor_id" ColumnName="doctor_id" />
+                <ScalarProperty Name="patient_id" ColumnName="patient_id" />
+                <ScalarProperty Name="end_date" ColumnName="end_date" />
+                <ScalarProperty Name="no_dosage" ColumnName="no_dosage" />
+                <ScalarProperty Name="Weight" ColumnName="Weight" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

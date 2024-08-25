@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="6eb77a785e8c4319804959a00e4ffd92" Name="Diagram1">
+        <EntityTypeShape EntityType="Pill_Reminder_SystemModel.CareTaker" Width="1.5" PointX="6" PointY="15.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="Pill_Reminder_SystemModel.Dispenser" Width="1.5" PointX="5.25" PointY="19.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="Pill_Reminder_SystemModel.Dispenser2" Width="1.5" PointX="5.25" PointY="27.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="Pill_Reminder_SystemModel.Doctor" Width="1.5" PointX="0.75" PointY="16.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="Pill_Reminder_SystemModel.M_Schedule" Width="1.5" PointX="10.5" PointY="18.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Pill_Reminder_SystemModel.M_Schedule2" Width="1.5" PointX="10.5" PointY="23.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="Pill_Reminder_SystemModel.Medicine" Width="1.5" PointX="8.25" PointY="20.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Pill_Reminder_SystemModel.P_Schedule" Width="1.5" PointX="10.5" PointY="14" IsExpanded="true" />
+        <EntityTypeShape EntityType="Pill_Reminder_SystemModel.Patient" Width="1.5" PointX="3" PointY="25.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="Pill_Reminder_SystemModel.Patient_CareTaker" Width="1.5" PointX="8.25" PointY="25.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Pill_Reminder_SystemModel.Prescription" Width="1.5" PointX="8.25" PointY="16.125" IsExpanded="true" />
+        <AssociationConnector Association="Pill_Reminder_SystemModel.FK__Medicine__careta__2180FB33" ManuallyRouted="false" />
+        <AssociationConnector Association="Pill_Reminder_SystemModel.FK__Patient_C__caret__1F63A897" ManuallyRouted="false" />
+        <AssociationConnector Association="Pill_Reminder_SystemModel.FK__Dispenser__patie__76619304" ManuallyRouted="false" />
+        <AssociationConnector Association="Pill_Reminder_SystemModel.FK__Dispenser__patie__318258D2" ManuallyRouted="false" />
+        <AssociationConnector Association="Pill_Reminder_SystemModel.FK__Medicine__doctor__22751F6C" ManuallyRouted="false" />
+        <AssociationConnector Association="Pill_Reminder_SystemModel.FK__Patient__doctor___1AD3FDA4" ManuallyRouted="false" />
+        <AssociationConnector Association="Pill_Reminder_SystemModel.FK__Prescript__docto__2A164134" ManuallyRouted="false" />
+        <AssociationConnector Association="Pill_Reminder_SystemModel.FK__Schedule__med_id__3D2915A8" ManuallyRouted="false" />
+        <AssociationConnector Association="Pill_Reminder_SystemModel.FK__M_Schedul__med_i__2EA5EC27" ManuallyRouted="false" />
+        <AssociationConnector Association="Pill_Reminder_SystemModel.FK__Medicine__patien__208CD6FA" ManuallyRouted="false" />
+        <AssociationConnector Association="Pill_Reminder_SystemModel.FK__P_Schedul__pres___4F47C5E3" ManuallyRouted="false" />
+        <AssociationConnector Association="Pill_Reminder_SystemModel.FK__Patient_C__patie__2057CCD0" ManuallyRouted="false" />
+        <AssociationConnector Association="Pill_Reminder_SystemModel.FK__Prescript__patie__29221CFB" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
